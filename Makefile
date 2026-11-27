@@ -1,7 +1,7 @@
 # godot-ps4-homebrew — Basic Makefile
 
 DOCKER_IMAGE   ?= godot-ps4-toolchain:latest
-GODOT_VERSION  ?= ??
+GODOT_VERSION  ?= 3.6
 BUILD_DIR      ?= build
 DIST_DIR       ?= dist
 
