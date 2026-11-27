@@ -1,3 +1,0 @@
-# Git submodules configuration for godot-ps4-homebrew (Godot ??).
-# Pin the target upstream Godot branch/tag via:
-#   git submodule add -b ?? https://github.com/godotengine/godot.git thirdparty/godot
