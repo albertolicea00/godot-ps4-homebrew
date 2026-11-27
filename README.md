@@ -1,12 +1,12 @@
-# godot-ps4-homebrew `v??`
+# godot-ps4-homebrew `v4.6`
 
-Clean-room PlayStation 4 homebrew (**OpenOrbis** / **GoldHEN**) export template (`platform/orbis`) and `.pkg` exporter addon for **Godot Engine ??**.
+Clean-room PlayStation 4 homebrew (**OpenOrbis** / **GoldHEN**) export template (`platform/orbis`) and `.pkg` exporter addon for **Godot Engine 4.6**.
 
-> **Base Template:** Version-specific implementations and submodules live on dedicated branches created from this base (replacing `??` with the target Godot version).
+> **Target Branch:** Godot `4.6` (`gl_compatibility` / GLES 3.0).
 
 ## Overview
 
-- **Runtime (`platform/orbis/` + `patches/`):** Cross-compiled Godot (`??`) export templates targeting Orbis OS via `OpenOrbis-PS4-Toolchain`, Piglet (GLES / EGL), `libSceAudioOut`, and `libScePad`.
+- **Runtime (`platform/orbis/` + `patches/`):** Cross-compiled Godot (`4.6`) export templates targeting Orbis OS via `OpenOrbis-PS4-Toolchain`, Piglet (GLES / EGL), `libSceAudioOut`, and `libScePad`.
 - **Editor Addon (`addons/ps4_homebrew_export/`):** Editor export plugin to package `.pck` + Fake SELF (`eboot.bin`) into an installable Fake `.pkg` using `create-fself` and `PkgTool.Core`.
 - **Toolchain (`docker/`):** Reproducible Docker environment for cross-compiling templates without requiring proprietary SDKs.
 
@@ -15,7 +15,7 @@ Clean-room PlayStation 4 homebrew (**OpenOrbis** / **GoldHEN**) export template 
 ```sh
 make help        # List available build and utility targets
 make toolchain   # Build the OpenOrbis Docker toolchain image
-make templates   # Cross-compile Godot ?? Orbis export templates
+make templates   # Cross-compile Godot 4.6 Orbis export templates
 make clean       # Remove local build artifacts
 ```
 
