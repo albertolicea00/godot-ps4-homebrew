@@ -1,0 +1,42 @@
+# Local workspace & scratch
+.workspace/
+.ignore/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Build & Packaging outputs
+build/
+builds/
+dist/
+out/
+bin/
+*.elf
+*.oelf
+*.fself
+eboot.bin
+*.pck
+*.pkg
+*.gp4
+*.sfo
+*.tpz
+
+# C++ / SCons artifacts
+*.o
+*.os
+*.a
+*.so
+*.dylib
+.sconsign.dblite
+config.log
+
+# Godot project cache
+.godot/
+.import/
+*.import
+export_presets.cfg
