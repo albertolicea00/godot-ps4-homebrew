@@ -12,7 +12,10 @@ Thank you for your interest in contributing!
 
 - **`versions` (default branch):** Contains only the general project overview, community governance files, and the directory of supported Godot branches in `README.md`.
 - **Version branches (`4.6`, `3.6`, etc.):** Contain the actual implementation (`platform/orbis/`, `patches/`, `addons/`, `docker/`, `Makefile`) for each Godot release.
-- **Adding a new Godot version:** Create a new version branch (from the base template commit or closest sibling branch), adapt the Godot submodule/patches, and open a PR against `versions` adding the new branch to the table in `README.md`.
+- **Adding a new Godot version (e.g., `4.7`):**
+  1. Branch directly from the closest sibling branch (`git checkout -b 4.7 4.6`) — or from the base template commit when starting a new major family — so ~98% of existing platform code carries over.
+  2. Update `thirdparty/godot`, `GODOT_VERSION`, `README.md`, and adapt any changed engine hooks while leaving `4.6` intact for existing users and releases.
+  3. Open a PR (or commit) on `versions` adding the new branch to the **Supported Godot Versions** table in `README.md`.
 - **Shared changes:** Keep engine-agnostic improvements (`docker/`, `Makefile`, host tools, docs, or shared `platform/orbis/` fixes) in isolated commits and `git cherry-pick` them onto the other active version branches.
 
 ## Basic Pull Request Flow
