@@ -16,6 +16,14 @@ Clean-room PlayStation 4 homebrew (**OpenOrbis** / **GoldHEN**) export templates
 git clone -b 4.6 https://github.com/albertolicea00/godot-ps4-homebrew.git
 ```
 
+## Supporting New Godot Releases (e.g. `4.7+`)
+
+When a new Godot release comes out:
+
+1. Create the new branch from the closest sibling branch (e.g., `git checkout -b 4.7 4.6`) to reuse existing platform code and addon tooling.
+2. Update `thirdparty/godot`, `GODOT_VERSION`, and any minimal `#ifdef ORBIS_ENABLED` patches, while keeping `4.6` frozen for users still on that version.
+3. Register the new branch in the table above on `versions`, and use `git cherry-pick` to share engine-agnostic fixes across active branches (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+
 ## What's Inside Each Version Branch
 
 - **Runtime (`platform/orbis/` + `patches/`):** Cross-compiled Godot export templates targeting Orbis OS via `OpenOrbis-PS4-Toolchain`, Piglet (GLES / EGL), `libSceAudioOut`, and `libScePad`.
