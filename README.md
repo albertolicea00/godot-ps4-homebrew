@@ -23,15 +23,6 @@ make clean       # Remove local build artifacts
 
 This project uses **100% open-source homebrew tools** (`OpenOrbis-PS4-Toolchain`, `PacBrew`, `LibOrbisPkg` / `PkgTool.Core`). No proprietary Sony SDK code, headers, keys, or firmware `.sprx` binaries are used or distributed.
 
-## Branches
-
-| Branch | Godot Version | Renderer (Piglet) |
-| :--- | :--- | :--- |
-| `4.6` | Godot 4.6 | `gl_compatibility` (GLES 3.0) |
-| `3.6` | Godot 3.6 | `GLES2` (OpenGL ES 2.0) |
-
-> When adding a new version branch, update this table in a standalone commit and `git cherry-pick` it onto all other active branches (see [CONTRIBUTING.md](CONTRIBUTING.md)).
-
 ## Documentation
 
 - [Architecture Overview](docs/ARCHITECTURE.md)
